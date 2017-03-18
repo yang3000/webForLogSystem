@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Inventec
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // Bootstrap
+    link(href='stylesheets/css/bootstrap.css', rel='stylesheet', media='screen')
+    link(href='stylesheets/css/thin-admin.css', rel='stylesheet', media='screen')
+    link(href='stylesheets/css/font-awesome.css', rel='stylesheet', media='screen')
+    link(href='stylesheets/style/style.css', rel='stylesheet')
+    link(href='stylesheets/style/dashboard.css', rel='stylesheet')
+    script(src='javascripts/jquery.js')
+    script(src='javascripts/bootstrap.min.js')
+    //script(src='/jquery-3.0.0.min.js')
+
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='../../assets/js/html5shiv.js')
+      script(src='../../assets/js/respond.min.js')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  body
+    .container
+      .top-navbar.header.b-b
+        a.toggle-side-nav.pull-left(data-original-title='Toggle navigation', href='#')
+          i.icon-reorder
+        .brand.pull-left
+          a(href='index.html')
+            img(src='images/logo.png', width='147', height='33')
+        ul.nav.navbar-nav.navbar-right.hidden-xs
+          li.dropdown.user.hidden-xs
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.icon-male
+              span#head_userName_id.username
+              i.icon-caret-down.small
+            ul.dropdown-menu
+              li
+                a(href='/login')
+                  i.icon-key
+                  |  Log Out
+    block content_main
+    .bottom-nav.footer  2013 © Thin Admin by Riaxe Systems.
+  script(src='/javascripts/jquery.js')
+  script(src='javascripts/bootstrap.min.js')
+  script(type='text/javascript', src='javascripts/smooth-sliding-menu.js')

@@ -1,0 +1,54 @@
+  #myModal2.modal.fade(style='display: none;', aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(aria-hidden='true', data-dismiss='modal', type='button') x
+          h4#myModalLabel2.modal-title Add user information
+        .modal-body-yh-1
+          .widget-content-yh.form-horizontal
+            .control-group
+              label.control-label(for='prepended_input') Prepended input
+              .controls.form-group
+                .input-group
+                  span.input-group-addon
+                    i.icon-user
+                  input#prepended_input.form-control(type='text', placeholder='Username', size='16')
+            .control-group
+              label.control-label(for='password_field') Password
+              .controls.form-group
+                .input-group
+                  span.input-group-addon
+                    i.icon-lock
+                  input#password_field.form-control(type='password', placeholder='Password')
+            .control-group
+              label.control-label(for='normal_field') Normal field
+              .controls.form-group
+                  input#name_en.form-control(type='text', placeholder='May have placeholder')
+            .control-group
+              label.control-label(for='normal_field') Normal field
+              .controls.form-group
+                input#name_cn.form-control(type='text', placeholder='May have placeholder')
+            .control-group
+              label.control-label(for='normal_field') Normal field
+              .controls.form-group
+                input#normal_field.form-control(type='text', placeholder='May have placeholder')
+            .control-group
+              label.control-label(for='max_length') Max length
+              .controls.form-group
+                input#max_length.form-control(type='text', data-original-title='You cannot write more than 3 characters.', data-placement='top', placeholder='Max length 3 characters', maxlength='3')
+            .control-group
+              label.control-label(for='appended_input') Appended input
+              .controls.form-group
+                .input-group
+                  input#appended_input.form-control(type='text', size='16')
+                  span.input-group-addon .00
+            .control-group
+              label.control-label(for='combined_input') Combined
+              .controls.form-group
+                .input-group
+                  span.input-group-addon $
+                  input#combined_input.form-control(type='text', size='16')
+                  span.input-group-addon .00
+        .modal-footer
+          button#save_id.btn.btn-default(data-dismiss='modal', type='button') Close
+          button.btn.btn-primary(type='button') Save changes

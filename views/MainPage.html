@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MainPage</title>
+    <link rel="stylesheet" href="stylesheets/menu.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/data_table.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/checkedRadio.css" media="screen" type="text/css" />
+    <script src="/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<div style="width: 100%;">
+    <div class="menuHolder">
+        <div class="menuWindow">
+            <ul class="p1">
+                <li class="s1"><a href="#url"><span class="s1span">导航菜单</span></a>
+                    <ul class="p2">
+                        <li class="s2"><a href="/test"><span class="s2span">首页</span></a></li>
+                        <li class="s2"><a id="a_id_detail" href="#"><span class="s2span">明细查询</span></a></li>
+                        <li class="s2"><a href="#url"><span class="s2span">图表</span></a>
+                            <ul class="p3 a3">
+                                <li><a href="#">打印</a></li>
+                                <li><a href="#">编辑</a></li>
+                                <li><a href="#">保管</a></li>
+                            </ul>
+                        </li>
+                        <li class="s2">
+                            <a href="#url">
+                                <span class="s2span">表格</span>
+                            </a>
+                            <ul class="p3 a6">
+                                <li><a href="#">支持</a></li>
+                                <li><a href="#">销售</a></li>
+                                <li><a href="#">购买</a></li>
+                                <li><a href="#">摄影师</a></li>
+                                <li><a href="#">零售商</a></li>
+                                <li><a href="#">常规</a></li>
+                            </ul>
+                        </li>
+                        <li class="s2"><a href="#url" ><span class="s2span">其他</span></a>
+                            <ul class="p3 a3">
+                                <li><a href="#">南区</a></li>
+                                <li><a href="#">北区</a></li>
+                                <li><a href="#">中心区</a></li>
+                            </ul>
+                        </li>
+                        <li class="s2"><a href=""><span class="s2span">联系我</span></a>
+                            <ul class="p3 a3">
+                                <li><a href="#">邮箱</a></li>
+                                <li><a href="#">邮递</a></li>
+                                <li><a href="#">电话</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div  class="top">
+        <div id="id-checked-radio" class="checkedRadio-float">
+            <div class="checkedRadio-float checkedRadio-padding">
+                <ul>
+                    <li><input id="id-checked" type="radio" name="radio-btn" />SA_FCT</li>
+                    <li><input type="radio" name="radio-btn" />SA_RFT</li>
+                    <li><input type="radio" name="radio-btn" />SA_HRMB</li>
+
+                </ul>
+            </div>
+            <div class="checkedRadio-float checkedRadio-padding">
+            <ul>
+                <li><input type="radio" name="radio-btn" />FA_PreFinal</li>
+                <li><input type="radio" name="radio-btn" />FA_Final</li>
+                <li><input type="radio" name="radio-btn" />FA_OTA</li>
+
+            </ul>
+            </div>
+        </div>
+        <div class="checkedRadio-float checkedRadio-padding">
+            <input  type="text" id="csn" class="search" />
+            <button id="search_detail">Search</button>
+        </div>
+
+    </div>
+    <div class="content" id="value_id" ></div>
+   <!-- <div style="text-align:center;clear:both;margin-top:360px">werewru</div>-->
+</div>
+<script src="/mainPage.js"></script>
+<script src="/checkedRadio.js"></script>
+</body>
+</html>

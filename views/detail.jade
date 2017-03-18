@@ -1,0 +1,34 @@
+//
+   Created by yhorz on 2016/8/9.
+
+extends layout
+
+block content
+    .top
+        .checkedRadio-float.checkedRadio-padding
+            input#csn.search(type='text')
+            button#search_detail Search
+        #id-checked-radio.checkedRadio-float
+            .checkedRadio-float.checkedRadio-padding
+                ul
+                    li
+                        input#id-checked(type='radio', name='radio-btn')
+                        | SA_FCT
+                    li
+                        input(type='radio', name='radio-btn')
+                        | SA_RFT
+                    li
+                        input(type='radio', name='radio-btn')
+                        | SA_HRMB
+            .checkedRadio-float.checkedRadio-padding
+                ul
+                    li
+                        input(type='radio', name='radio-btn')
+                        | FA_PreFinal
+                    li
+                        input(type='radio', name='radio-btn')
+                        | FA_Final
+                    li
+                        input(type='radio', name='radio-btn')
+                        | FA_OTA
+    #value_id.content

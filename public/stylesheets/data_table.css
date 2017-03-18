@@ -1,0 +1,36 @@
+
+.search{
+    width:120px;
+    height:24px;
+    padding:0;
+    border:1px solid #ccc;
+    -webkit-box-shadow:inset 0 0  3px 5px rgba(0.1,0.1,0.1,.0);
+    -webkit-box-shadow: inset 0px 0px 8px 2px #CCC;
+    outline:none;
+    padding-left:5px;
+    font: normal 15px/1.5 Calibri, Candara, Segoe, "Microsoft YaHei UI", Optima, Arial, sans-serif;
+}
+.li_style  {
+    list-style-type:none;
+    text-align:left;
+    margin:2px;
+}
+.item {
+    text-align:right;
+    margin:2px;
+    display:inline-block;
+    width:220px;
+}
+.top{
+    margin:0 auto;
+    width:50%;
+    /*float:left;
+    width: 50%;
+    margin:20px 0 0 500px;*/
+}
+.content{
+    width:100%;
+    margin:30px 0 0 50px;
+    float:left;
+    overflow:auto;
+}

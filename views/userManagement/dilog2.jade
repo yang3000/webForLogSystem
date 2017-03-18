@@ -1,0 +1,54 @@
+#myModal.modal.fade(style='display: none;', aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+    .modal-dialog-yh
+        .modal-content
+            .modal-header
+                button.close(aria-hidden='true', data-dismiss='modal', type='button') x
+                h4#myModalLabel2_1.modal-title Add user information
+            .modal-body-yh
+                .widget-content-yh.form-horizontal
+                    .control-group
+                        label.control-label-yh(for='prepended_input_1') Prepended input
+                        .form-group
+                            .input-group
+                                span.input-group-addon
+                                    i.icon-user
+                                input#prepended_input_1.form-control(type='text', placeholder='Username', size='16')
+                    .control-group
+                        label.control-label-yh(for='password_field_1') Password
+                        .form-group
+                            .input-group
+                                span.input-group-addon
+                                    i.icon-lock
+                                input#password_field_1.form-control(type='password', placeholder='Password')
+                    .control-group
+                        label.control-label-yh(for='normal_field') Normal field
+                        .form-group
+                            input#name_en_1.form-control(type='text', placeholder='May have placeholder')
+                    .control-group
+                        label.control-label-yh(for='normal_field') Normal field
+                        .form-group
+                            input#name_cn_1.form-control(type='text', placeholder='May have placeholder')
+                    .control-group
+                        label.control-label-yh(for='normal_field') Normal field
+                        .form-group
+                            input#normal_field_1.form-control(type='text', placeholder='May have placeholder')
+                    .control-group
+                        label.control-label-yh(for='max_length') Max length
+                        .form-group
+                            input#max_length_1.form-control(type='text', data-original-title='You cannot write more than 3 characters.', data-placement='top', placeholder='Max length 3 characters', maxlength='3')
+                    .control-group
+                        label.control-label-yh(for='appended_input') Appended input
+                        .form-group
+                            .input-group
+                                input#appended_input_1.form-control(type='text', size='16')
+                                span.input-group-addon .00
+                    .control-group
+                        label.control-label-yh(for='combined_input') Combined
+                        .form-group
+                            .input-group
+                                span.input-group-addon $
+                                input#combined_input_1.form-control(type='text', size='16')
+                                span.input-group-addon .00
+            .modal-footer
+                button#save_id_1.btn.btn-default(data-dismiss='modal', type='button') Close
+                button.btn.btn-primary(type='button') Save changes

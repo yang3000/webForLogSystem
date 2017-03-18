@@ -1,0 +1,64 @@
+extends ../mainpage/main
+block content
+  .page-content
+      .content.container
+        .row
+          .col-lg-12
+            h3.page-title
+              | SYSTEM
+              //small Statistics and more
+        .row
+          .col-lg-12
+        .row
+          .col-lg-6
+            .widget.widget-table.action-table
+              .widget-header
+                i.icon-th-list
+                h3 ProjectManagement
+                a#open_model_project(style='float:right;margin-top:10px;margin-right:30px;height:20px;', data-toggle='modal', type='button')
+                    i.icon-plus
+              .widget-content
+                table.table.table-striped.table-bordered
+                  thead
+                    tr
+                      th(style='width:40px;') Id
+                      th(style='width:30%;')  ProjectName
+                      th(style='width:15%;')  Department
+                      th(style='width:10%;')  Creator
+                      th(style='width:30%;')  CreateTime
+                      th(style='width:10%;').td-actions Operator
+                  tbody#tbody_project_data
+                    - each skill in data
+                      tr
+                        td #{skill["rownum"]}
+                        td #{skill["projectName"]}
+                        td #{skill["name"]}
+                        td #{skill["creator"]}
+                        td #{skill["createTime"]}
+                        td.td-actions
+                          a.btn.btn-small.btn-success(href='javascript:API_public.editProjectById(#{skill["projectCode"]});')
+                            i.btn-icon-only.icon-ok
+                          a.btn.btn-danger.btn-small(href='javascript:API_public.deleteProjectById(#{skill["projectCode"]});')
+                            i.btn-icon-only.icon-remove
+              .clearfix
+                ul#page_id.pagination.no-margin
+                  li.disabled
+                    a#prev(href='javascript:API_public.queryPrevPage();') Prev
+                  -var n=1;
+                    while n <= page_count
+                      if n == 1
+                        li
+                          a(style='background-color:rgba(0, 0, 0, 0.15)',href='javascript:API_public.queryProjectByPage(#{n});') #{n}
+                      else
+                        li
+                          a(href='javascript:API_public.queryProjectByPage(#{n});') #{n}
+                      - n++;
+                  if page_count > 1
+                    li
+                      a#next(href='javascript:API_public.queryNextPage(#{page_count});') Next
+                  else
+                    li.disabled
+                      a#next(href='javascript:API_public.queryNextPage(#{page_count});') Next
+               // /widget-content
+  include dilog_projectManagement
+  script(src='/javascripts/view_js/projectManagement.js')

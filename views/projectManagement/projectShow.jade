@@ -1,0 +1,53 @@
+extends ../mainpage/main
+block content
+  .page-content
+      .content.container
+        .row
+          .col-lg-12
+            h3.page-title
+              | SYSTEM
+              //small Statistics and more
+        .row
+          .col-lg-12
+        .row
+          .col-lg-6
+            .widget.widget-table.action-table
+              .widget-header
+                i.icon-th-list
+                h3 Activity
+              .widget-content
+                table.table.table-striped.table-bordered
+                  thead
+                    tr
+                      th(style='width:20%;')  user
+                      th(style='width:35%;')  department
+                      th(style='width:10%;')  times
+                      th(style='width:30%;')  lastTime
+                  tbody#tbody_project_log
+                    - each skill in data
+                      tr
+                        td #{skill["name_cn"]}
+                        td #{skill["name"]}
+                        td #{skill["times"]}
+                        td #{skill["lastTime"]}
+              .clearfix
+                ul#page_id.pagination.no-margin
+                  li.disabled
+                    a#prev(href='javascript:API_public.queryPrevPage();') Prev
+                  -var n=1;
+                    while n <= page_count
+                      if n == 1
+                        li
+                          a(style='background-color:rgba(0, 0, 0, 0.15)',href='javascript:API_public.queryProjectShowByPage(#{n});') #{n}
+                      else
+                        li
+                          a(href='javascript:API_public.queryProjectShowByPage(#{n});') #{n}
+                      - n++;
+                  if page_count > 1
+                    li
+                      a#next(href='javascript:API_public.queryNextPage(#{page_count});') Next
+                  else
+                    li.disabled
+                      a#next(href='javascript:API_public.queryNextPage(#{page_count});') Next
+               // /widget-content
+  script(src='/javascripts/view_js/projectShow.js')

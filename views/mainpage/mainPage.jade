@@ -1,0 +1,56 @@
+extends ../mainpage/main
+block content
+  .page-content
+    .content.container
+      .row
+        .col-md-12
+          h2.page-title Charts and Statistics
+      .row
+        .col-lg-8
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Bar Line Animated
+            .widget-content
+              #chart1(style='width:100%; height:350px')
+        .col-lg-4
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Pie Test
+            .widget-content
+              #chart7(style='width:100%; height:350px;')
+      .row
+        .col-lg-8
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Dashboard Widget
+            .widget-content
+              #chart2(style='width:100%; height:350px')
+        .col-lg-4
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Pie donut charts
+            .widget-content
+              #chart3(style='height:350px; width:100%;')
+      .row
+        .col-lg-8
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Axis Renderer
+            .widget-content
+              #chart4(style='width:100%; height:350px;')
+        .col-lg-4
+          .widget
+            .widget-header
+              i.icon-tasks
+              h3 Line Charts
+            .widget-content
+              #chart5(style='height:350px; width:100%;')
+  script(src='/charts.js')
+  script(src='/echarts.js')
+  script(src='/javascripts/view_js/mainPage.js')
+// End additional plugins

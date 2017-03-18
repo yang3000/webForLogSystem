@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="stylesheets/timeLabel.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/data_table.css" media="screen" type="text/css" />
+	<script src="/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+	<div class="grid-75 text-center">
+		<input type="file" id="files" multiple>
+		<button id="submit-parse">生成柱状图</button>
+        <button id="ajax_button">Ajax</button>
+        <input type="text" id="first_fail" title="提交">
+        <button id="bar_button">Bar</button>
+        <button id="test">Bar</button>
+        <div id='wrapper'>
+            <form>
+                <select class='custom-date' name='select'>
+                    <option value='7'>7 Days</option>
+                    <option value='30'>30 Days</option>
+                    <option selected='selected' value='90'>90 Days</option>
+                    <option value='180'>180 Days</option>
+                    <option value='365'>365 Days</option>
+                    <option value='custom'>Custom</option>
+                </select>
+            </form>
+        </div>
+	</div>
+    <div style="height:100px">
+        <input type="text" id="csn" class="search" />
+        <button id="search_detail">Search</button>
+    </div>
+    <div id="value_id" style=" width:100%;float:left;overflow:auto;"></div>
+    <div style="text-align:center;clear:both;margin-top:360px">
+    </div>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:500px"></div>
+    <div id="main1" style="height:500px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="/echarts.js"></script>
+    <script src="/papaparse.min.js"></script>
+    <script src="/charts.js"></script>
+    <script src="/player_3.0.0.js"></script>
+    <script src="/timeLabel.js"></script>
+</body>

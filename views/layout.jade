@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title MainPage
+    link(rel='stylesheet', href='stylesheets/menu.css', media='screen', type='text/css')
+    link(rel='stylesheet', href='stylesheets/data_table.css', media='screen', type='text/css')
+    link(rel='stylesheet', href='stylesheets/checkedRadio.css', media='screen', type='text/css')
+    script(src='/jquery-3.0.0.min.js')
+  body
+    div(style='width: 100%;')
+      .menuHolder
+        .menuWindow
+          ul.p1
+            li.s1
+              a(href='#url')
+                span.s1span 导航菜单
+              ul.p2
+                li.s2
+                  a(href='/test')
+                    span.s2span 首页
+                li.s2
+                  a#a_id_detail(href='/detail')
+                    span.s2span 明细查询
+                li.s2
+                  a(href='#url')
+                    span.s2span 图表
+                  ul.p3.a3
+                    li
+                      a(href='#') 打印
+                    li
+                      a(href='#') 编辑
+                    li
+                      a(href='#') 保管
+                li.s2
+                  a(href='#url')
+                    span.s2span 表格
+                  ul.p3.a6
+                    li
+                      a(href='#') 支持
+                    li
+                      a(href='#') 销售
+                    li
+                      a(href='#') 购买
+                    li
+                      a(href='#') 摄影师
+                    li
+                      a(href='#') 零售商
+                    li
+                      a(href='#') 常规
+                li.s2
+                  a(href='#url')
+                    span.s2span 其他
+                  ul.p3.a3
+                    li
+                      a(href='#') 南区
+                    li
+                      a(href='#') 北区
+                    li
+                      a(href='#') 中心区
+                li.s2
+                  a(href='')
+                    span.s2span 联系我
+                  ul.p3.a3
+                    li
+                      a(href='#') 邮箱
+                    li
+                      a(href='#') 邮递
+                    li
+                      a(href='#') 电话
+      block content
+      // <div style="text-align:center;clear:both;margin-top:360px">werewru</div>
+    script(src='/mainPage.js')
+    script(src='/checkedRadio.js')
+

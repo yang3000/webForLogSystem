@@ -1,0 +1,29 @@
+#myModal.modal.fade(style='display: none;', aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+  .modal-dialog-yh
+    .modal-content
+        .modal-header
+          button.close(aria-hidden='true', data-dismiss='modal', type='button') x
+          h4#myModalLabel2_2.modal-title Add user information
+        .modal-body-yh-1
+          .widget-content-yh-1.form-horizontal
+            .control-group
+              .form-group
+                .input-group
+                  span.input-group-addon
+                    i.icon-user
+                  input#userName.form-control(type='text', placeholder='Username', size='16')
+            .control-group
+              .form-group
+                .input-group
+                  span.input-group-addon
+                    i.icon-lock
+                  input#password.form-control(type='password', placeholder='Password')
+            .control-group
+              .form-group
+                input#name.form-control(type='text', placeholder='Input your chinese name')
+            .control-group
+              .form-group
+                select#roleId.form-control-yh
+        .modal-footer
+          button.btn.btn-default(data-dismiss='modal', type='button') Close
+          button#save_id.btn.btn-primary(type='button') Save changes

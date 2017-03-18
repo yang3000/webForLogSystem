@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        title Inventec
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        // Bootstrap
+        link(href='stylesheets/css/bootstrap.css', rel='stylesheet', media='screen')
+        link(href='stylesheets/css/thin-admin.css', rel='stylesheet', media='screen')
+        link(href='stylesheets/css/font-awesome.css', rel='stylesheet', media='screen')
+        link(href='stylesheets/style/style.css', rel='stylesheet')
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    body
+        .login-logo
+            img(src='images/logo11.png', width='147', height='33')
+        .widget
+            .login-content
+                .widget-content(style='padding-bottom:0;')
+                    form.no-margin(method='post',onsubmit='return false')
+                        h3.form-title Login to your account
+                        fieldset
+                            .form-group.no-margin
+                                label(for='UserName') UserName
+                                .input-group.input-group-lg
+                                    span.input-group-addon
+                                        i.icon-user
+                                    input#UserName.form-control.input-lg(type='UserName', placeholder='Your Username')
+                            .form-group
+                                label(for='password') Password
+                                .input-group.input-group-lg
+                                    span.input-group-addon
+                                        i.icon-lock
+                                    input#password.form-control.input-lg(type='password', placeholder='Your Password')
+                            .form-group
+                                label#errorMsg(style='color:#cc1111')
+                        .form-actions
+                            label.checkbox
+                                .checker
+                                    span
+                                        input(type='checkbox', value='1', name='remember')
+                                |  Remember me
+                            button#login_id.btn.btn-warning.pull-right(type='submit')
+                                | Login
+                                i.m-icon-swapright.m-icon-white
+                            .forgot
+                                a.forgot(href='#') Forgot Username or Password?
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='javascripts/jquery.js')
+        script(src='javascripts/bootstrap.min.js')
+        script(src='/javascripts/view_js/login.js')

@@ -1,0 +1,19 @@
+#Modal_UserGroup.modal.fade(style='display: none;', aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+  .modal-dialog-yh
+    .modal-content
+        .modal-header
+          button.close(aria-hidden='true', data-dismiss='modal', type='button') x
+          h4#myModalLabel2_2.modal-title Add user information
+        .modal-body-yh-1
+          .widget-content-yh-1.form-horizontal
+
+            .control-group
+              .form-group
+                input#groupName.form-control(type='text', placeholder='Input GroupName')
+            .control-group
+              .form-group
+                input#remark.form-control(type='text', placeholder='Input Remark')
+            #menu_tree.check-div
+        .modal-footer
+          button.btn.btn-default(data-dismiss='modal', type='button') Close
+          button#saveUserGroup_id.btn.btn-primary(type='button') Save changes
